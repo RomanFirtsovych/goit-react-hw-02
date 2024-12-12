@@ -1,15 +1,24 @@
-// import styles from './Feedback.module.css'
+import PropTypes from "prop-types";
+const Feedback = ({ good, neutral, bad, total, positivePercentage }) => {
+    return (
+        <div>
+            <ul>
+                <li>Good: {good}</li>
+                <li>Neature: {neutral}</li>
+                <li>Bad: {bad}</li>
+                <li>Total: {total}</li>
+                <li>Positive: {positivePercentage}%</li>
+            </ul>
+        </div>
+    );
+};
 
-// const Feedback = ({ good, neutral, bad }) => {
-//   return (
-//     <div className={styles.wrapper}>
-//       <h2>Feedback Summary</h2>
-//       <p>Good: {good}</p>
-//       <p>Neutral: {neutral}</p>
-//       <p>Bad: {bad}</p>
-//     </div>
-//   );
-// };
+Feedback.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
 
-
-// export default Feedback;
+export default Feedback;

@@ -1,0 +1,10 @@
+.btn{
+    display: flex;
+    gap: 10px;
+}
+
+.btnOption {
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 15px;
+}
